@@ -5,4 +5,5 @@ RUN go build main.go
 
 FROM alpine
 COPY --from=builder /app/main /app
+RUN touch list.yml
 CMD ["/app"]
