@@ -1,0 +1,11 @@
+###
+POST https://roomapi.hexia.io/api/v1/actueel-aanbod?limit=30&locale=nl_NL&page=0&sort=%2BreactionData.aangepasteTotaleHuurprijs
+Content-Type: application/json
+
+{
+  "filters": {
+    "regio.id": {
+      "$eq": 8
+    }
+  } 
+}
