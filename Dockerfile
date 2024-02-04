@@ -4,6 +4,5 @@ COPY . .
 RUN go build main.go
 
 FROM alpine
-COPY --from=builder /app/main /app
-RUN touch list.yml
-CMD ["/app"]
+COPY --from=builder /app/main /etc/periodic/daily/app
+CMD ["crond", "-f"]
